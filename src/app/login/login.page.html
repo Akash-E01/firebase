@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full" color="danger" (click)="login('bottom')">Login</ion-button>
+        <br>
+        <ion-text>Don't have an account yet? </ion-text> <a [routerLink]="['/signup']" class="small-text">Register here !</a> 
+        <br>
+        <ion-text>Forget Password ? </ion-text> <a [routerLink]="['/forgetpassword']" class="small-text">Click here</a> 
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
